@@ -1,6 +1,6 @@
 
 find_package(BLAZE)
-find_package(Boost COMPONENTS system)
+find_package(Boost 1.53 COMPONENTS system)
 if (BLAZE_FOUND AND Boost_FOUND)
   include_directories(${BLAZE_INCLUDE_DIR} ${Boost_INCLUDE_DIRS})
   btl_add_bench(btl_blaze main.cpp)
